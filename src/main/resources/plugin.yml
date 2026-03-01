@@ -1,0 +1,4 @@
+name: FlameArrowIgnite
+version: 1.0.0
+main: hex.wald.FlameArrowIgnite
+api-version: "1.21"
