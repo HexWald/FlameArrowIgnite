@@ -1,42 +1,19 @@
-# 🔥 FlameArrowIgnite
+# FlameArrowIgnite
 
-A small just-for-fun Minecraft plugin made for Paper/Spigot servers.
-Its goal is to add a bit of realism and roleplay flavor 🎭 to the game.
+Burning arrows have a chance to start a fire next to the block they hit. The fire needs a valid place to burn. Plugins that cancel Bukkit's block ignition event can stop it.
 
-When a burning arrow hits a block, it may ignite it based on a configurable chance.
+## Install
 
-## ✨ Features
-- Paper / Spigot 1.21+
-- Works only with burning arrows
-- Correct fire placement (top, sides, bottom — no floating fire)
-- Configurable ignition chance
+Put the JAR from [Releases](https://github.com/HexWald/FlameArrowIgnite/releases) in the `plugins` folder and restart the server. Requires Minecraft Java 1.21 or newer on Paper or Spigot.
 
-## 🛠 Build
-Requirements:
-- Java 21
-- Maven
+Edit `plugins/FlameArrowIgnite/config.yml` to change the chance per hit:
 
-Build command:
-mvn package
-
-Output:
-target/flamearrowignite-1.0.0.jar
-
-## 📦 Installation
-1. Drop the jar into the plugins folder
-2. Restart the server
-
-## ⚙ Configuration
-File:
-plugins/FlameArrowIgnite/config.yml
-
-Example:
+```yaml
 chance: 0.25
+```
 
-Chance is a value from 0.0 to 1.0.
+Use `0` to turn it off or `1` to light a fire on every valid hit. Minecraft handles fire spread and decay.
 
-## 🔥 Notes
-Fire spreading and decay are handled by vanilla Minecraft mechanics.
-Server gamerules or protection plugins may affect fire behavior.
+## Build
 
-Made for fun, immersion, and a bit of chaos 😉
+Run `mvn clean package` with JDK 21. The JAR is in `target/`.
